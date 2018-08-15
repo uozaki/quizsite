@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizsite</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+    <body>
+      
+      
+        
+       <div class="back_image">
+        <header>
+          <div class="clearfix">          
+            <h3 class="rogo">QUIZして</h3>
+            <div class="left_block">
+              <ul>
+                <li>
+                  <%= link_to '問題' , "/quiz" , method: :get %>
+                </li>
+                <li>
+                  <%= link_to '出題' , "/quiz/new",method: :get %>
+                </li>
+              </ul>
+            </div> 
+            <% if user_signed_in? %>
+              <h4 class="right_block">
+               <%= link_to "ログアウト", destroy_user_session_paht, method: :delete %>
+              </h4>
+            <% else %>
+              <h4 class="right_block">
+                <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+              </h4>
+            <% end %>  
+          </div>   
+        </header>
+        
+        <div class="contents">
+          
+          <%= yield %>
+          
+        </div>
+        
+        <footer>
+          <h4>Copyright © QUIZして（quizsite）All rights reserved.</h4>
+        </footer>
+      </div>
+    </body>
+    
+</html>

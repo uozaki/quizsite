@@ -1,0 +1,18 @@
+.hoshi{
+    float: left;
+    width: 5em;
+    height: 10em;
+}
+.shutudaisha{
+    float: left;
+}
+
+.clearfix:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.marginline{
+    width: 5em;
+    height: 10em;
+}

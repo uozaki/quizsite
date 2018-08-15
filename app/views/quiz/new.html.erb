@@ -1,0 +1,9 @@
+<div class="form">
+    <h1>問題投稿</h1>
+    <%= form_tag('/quiz/show', method: :get) do %>
+        <input type="text" name="img"  placeholder="image_url"><br>
+        <textarea  name="text" placeholder="text" raws="10" cols="30"></textarea><br>
+        <input type="text" name="ans" placeholder="ans"><br>
+        <input type="submit" value="出題する。">
+    <% end %>
+</div>

@@ -1,0 +1,23 @@
+<h5>　</h5>
+<h5>　　クイズ回答</h5>
+<h5>　</h5>
+<div class="contents_row">
+    <% @quiz.each do |quiz| %>
+        <h5>　</h5>
+        <h4>問題<%= quiz.id %>　<%= quiz.name %></h4>
+        <h5>　</h5>
+        <p><%= quiz.text %></p>
+        <h5>　</h5>
+        <div class="shutudaisha">出題者<%= quiz.user_id %></div>
+        <div class="hoshi">星</div>
+        <h5>　</h5>
+        
+        <%= link_to '回答する', "/quiz/#{quiz.id}/number", method: :get %> 
+        <div class="marginline">
+            
+        </div>
+        <div class="outline">
+        </div>
+    <% end %>
+    
+</div>

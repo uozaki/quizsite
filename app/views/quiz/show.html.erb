@@ -1,0 +1,22 @@
+<h1>出題確認</h1>
+
+画像：<%= @img %><br>
+問題文：<%= @text %><br>
+答え：<%= @ans %><br>
+
+
+
+
+
+<%= form_tag('/quiz', method: :post) do %>
+
+    <input type="hidden" name='img' value="<%= @img %>">
+    <input type="hidden" name='text' value="<%= @text %>">
+    <input type="hidden" name='ans' value="<%= @ans %>">
+    <input type="submit" value="出題する">    
+<% end %>
+
+<%= form_tag('/quiz/new', method: :get) do %>
+    <input type="submit" value="やり直す">
+<% end %>
+
