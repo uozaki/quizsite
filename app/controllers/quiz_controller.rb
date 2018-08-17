@@ -6,8 +6,9 @@ class QuizController < ApplicationController
     def new
     end
     
-    def number
+    def nummber
         @quiz =Quiz.find(params[:id])
+        @comments =@quiz.comments.includes(:user)
     end
     
     def show
@@ -21,5 +22,8 @@ class QuizController < ApplicationController
     end
     
     def answer
+        @user_ans =params[:user_ans]
+        @answer =Quiz.find(params[:id])
+        @quiz =Quiz.find(params[:id])
     end
 end

@@ -15,12 +15,26 @@
             <div class="hoshi">星</div>
             <h5>　</h5>
         </div>
-        
-        <%= form_tag('/quiz/answer', method: :post) do %>
+        <p>半角数字orひらがなで回答して下さい</p>
+        <%= form_tag("/quiz/#{@quiz.id}/answer", method: :post) do %>
             <input type='text' name="user_ans" raws="25">
-            <input type="submit" value="回答する"
+            <input type="submit" value="回答する">
+            <input type='hidden' name='id' value="<%= @quiz.id %>">
             
         <% end %>
+        <div class=comment>
+            <% if @comments %>
+                <% @comments.each do |comment| %>
+                 <h4><%= comment.name%>　</h4>
+                 <p><%= comment.text%></p>
+                 
+                 <div class=comment_line>
+                 </div>
+                <% end %>
+             
+            <% end %>
+            
+        </div>
       
         <div class="marginline">
             
