@@ -5,7 +5,10 @@ h1,h2,h3,h4,h5,h6,p,body {
   margin: 0;
 }
 
-
+body{
+    height: 100%;
+    width: 100%;
+}
 
 
 
@@ -19,8 +22,9 @@ header {
 .contents{
     background-color: #EEEEEE;
     margin: 0  auto;
-    height: 72em;
+    height: 100%;
     width: 62em;
+    
 }
 
 
@@ -42,7 +46,11 @@ footer{
 
 .back_image{
     background-image: url('wood_pattern_@2X.jpg');
+     height: 100%;
+    width: 100%;
 }
+    
+
 .rogo{
     float: left;
     padding: 0px 0;
@@ -93,4 +101,14 @@ ul,li{
 }
 .sign_up{
     margin: 0;
+}
+.row_block{
+
+    height: 3em;
+    background-color: #EEEEEE;
+    margin: auto;
+}
+ul.left_block{
+    float: left;
+　　margin:  auto;
 }

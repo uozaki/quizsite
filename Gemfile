@@ -49,5 +49,10 @@ gem 'sprockets', '2.11.0'
 gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
+gem 'kaminari'
+gem 'carrierwave'
+gem 'rmagick'
 end
-
+group :production do
+  gem 'rails_12factor'
+end

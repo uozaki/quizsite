@@ -1,22 +1,48 @@
-<h1>出題確認</h1>
+<%= stylesheet_link_tag    'quiz/show', media: 'all' %>
 
-画像：<%= @img %><br>
-問題文：<%= @text %><br>
-答え：<%= @ans %><br>
+<%
+    genre=["なぞなぞ","数学","科学","ライフスタイル","アニメ・ゲーム","スポーツ","その他"]
+    math=@genre.to_i
+
+%>
 
 
-
-
-
-<%= form_tag('/quiz', method: :post) do %>
-
-    <input type="hidden" name='img' value="<%= @img %>">
-    <input type="hidden" name='text' value="<%= @text %>">
-    <input type="hidden" name='ans' value="<%= @ans %>">
-    <input type="submit" value="出題する">    
-<% end %>
-
-<%= form_tag('/quiz/new', method: :get) do %>
-    <input type="submit" value="やり直す">
-<% end %>
-
+<div class='height_block'>
+</div>
+<div class='contents_row'> 
+     <h3>　</h3>
+    <h3>　出題確認</h3>
+    <div class='line'></div>
+    
+    <div class='form'>
+        <br>
+        画像：<%= @img %><br>
+        <br>
+        ジャンル：<%= genre[math] %><br>
+        <br>
+        問題文：<%= @text %><br>
+        <br>
+        答え：<%= @ans %><br>
+        <h2>　</h2>
+        
+        
+        
+        
+        <%= form_tag('/quiz', method: :post) do %>
+        
+            <input type="hidden" name='img' value="<%= @img %>">
+            <input type="hidden" name='genre' value="<%= @genre %>">
+            <input type="hidden" name='text' value="<%= @text %>">
+            <input type="hidden" name='ans' value="<%= @ans %>">
+            <input type="hidden" name='user_id' value=<%= current_user.id %>>
+        
+            <input type="submit" value="出題する">    
+        <% end %>
+        
+        <%= form_tag('/quiz/new', method: :get) do %>
+            <h2>　</h2>
+            <input type="submit" value="やり直す">
+            <h2>　</h2>
+        <% end %>
+    </div>    
+</div>

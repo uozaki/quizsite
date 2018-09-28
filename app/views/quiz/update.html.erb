@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag    'quiz/create', media: 'all' %>
+
+<div class='height_block'>
+</div>
+<div class='contents_row'> 
+    <h3>編集完了しました。</h3>
+    <div class='line'></div>
+    <h3>　</h3>
+
+
+    <%= link_to '問題へ戻る' , '/quiz' %>
+    <%= link_to 'マイページに戻る',"/users/#{current_user.id}", method: :get %>
+</div>

@@ -11,40 +11,66 @@
       
         
        <div class="back_image">
+        
         <header>
           <div class="clearfix">          
-            <h3 class="rogo">QUIZして</h3>
+            <h3 class="rogo">　　QUIZして</h3>
             <div class="left_block">
               <ul>
                 <li>
                   <%= link_to '問題' , "/quiz" , method: :get %>
                 </li>
                 <li>
-                  <%= link_to '出題' , "/quiz/new",method: :get %>
+                  <%= link_to '人気順' , "/quiz/popular" , method: :get %>
                 </li>
+                <% if user_signed_in? %>
+                  <li>
+                    <%= link_to '出題' , "/quiz/new",method: :get %>
+                  </li>
+                <% end %>  
+                  
               </ul>
+           
             </div> 
             <% if user_signed_in? %>
               <h4 class="right_block">
+               <%= link_to "マイページ", "/users/#{current_user.id}", method: :get %>
                <%= link_to "ログアウト",  destroy_user_session_path, method: :delete %>
               </h4>
             <% else %>
               <h4 class="right_block">
-                <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+                
+                <%= link_to "新規登録　", new_user_registration_path, method: :get %>
+                <%= link_to "ログイン　", new_user_session_path, method: :post %>
               </h4>
             <% end %>  
-          </div>   
+            <h4>　</h4>
+          <div class="left_block">  
+            <ul>
+              <li><%= link_to 'なぞなぞ' , "/quiz/nazonazo" , method: :get %></li>
+              <li><%= link_to '数学' , "/quiz/math" , method: :get %></li>
+              <li><%= link_to '科学' , "/quiz/science" , method: :get %></li>
+              <li><%= link_to 'ライフスタイル' , "/quiz/life" , method: :get %></li>
+              <li><%= link_to 'アニメ・ゲーム' , "/quiz/anime" , method: :get %></li>
+              <li><%= link_to 'スポーツ' , "/quiz/sport" , method: :get %></li>
+              <li><%= link_to 'その他' , "/quiz/otherwise" , method: :get %></li>
+            </ul>
+          </div>
         </header>
+       
         
-        <div class="contents">
+          <div class="contents">
+            
+            <%= yield %>
+          <div class='row_block'>
+          </div>
+          </div>
+         
           
-          <%= yield %>
-          
-        </div>
-        
-        <footer>
-          <h4>Copyright © QUIZして（quizsite）All rights reserved.</h4>
-        </footer>
+          <footer>
+            <h4>Copyright © QUIZして（quizsite）All rights reserved.</h4>
+          </footer>
+          </div>
       </div>
     </body>
     

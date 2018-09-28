@@ -1,8 +1,17 @@
-<h1>出題完了しました</h1>
-<div class=more>
-    <%= link_to 'さらに出題する',"/quiz/new", method: :get %>
+<%= stylesheet_link_tag    'quiz/create', media: 'all' %>
+
+<div class='height_block'>
 </div>
-<div>
-    <%= link_to '問題へ' , "/quiz",  mehod: :get %>
-    <div></div>
+<div class='contents_row'> 
+<h3>　出題完了しました</h3>
+    <div class='line'></div>
+    <h3>　</h3>
+    <div class=more>
+        <%= link_to '　さらに出題する',"/quiz/new", method: :get %>
+    </div>
+    <div>　</div>
+    <div>
+        <%= link_to '　問題へ' , "/quiz",  mehod: :get %>
+        <h3>　</h3>
+    </div>
 </div>

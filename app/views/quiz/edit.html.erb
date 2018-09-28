@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag    'quiz/new', media: 'all' %>
+
+<div class='height_block'>
+</div>
+<div class='contents_row'> 
+     <h3>　</h3>
+    <h3>　問題編集</h3>
+    <div class='line'></div>
+    
+    <div class='form'>
+        <%= form_tag("/quiz/#{@quiz.id}", method: :patch) do %>
+                    <p>画像</p>
+            <input class='box' type="img" name='img' value="<%= @img %>">
+            <br>
+            <p>ジャンル</p>
+            <select class='box' name="genre" size="1">
+                <option value="1">なぞなぞ</option>
+                <option value="2">数学</option>
+                <option value="3">科学</option>
+                <option value="4">ライフスタイル</option>
+                <option value="5">アニメ・ゲーム</option>
+                <option value="6">スポーツ</option>
+                <option value="7">その他</option>
+            </select>
+            <br>
+            <p>問題文</p>
+            <textarea class='boxx'  name='text' value="<%= @text %>">
+            </textarea>
+            <br>
+            <p>答え</p>
+            <input  class='box' type="ans" name='ans' value="<%= @ans %>">
+            <br>
+            <input class='box' type="hidden" name='user_id' value=<%= current_user.id %>>
+            <br>
+            <input  type="submit" value="編集する。">    
+        <% end %>
+    </div>    
+</div>
+
+
+      

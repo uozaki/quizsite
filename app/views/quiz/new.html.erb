@@ -1,9 +1,47 @@
-<div class="form">
-    <h1>問題投稿</h1>
-    <%= form_tag('/quiz/show', method: :get) do %>
-        <input type="text" name="img"  placeholder="image_url"><br>
-        <textarea  name="text" placeholder="text" raws="10" cols="30"></textarea><br>
-        <input type="text" name="ans" placeholder="ans"><br>
-        <input type="submit" value="出題する。">
-    <% end %>
+<%= stylesheet_link_tag    'quiz/new', media: 'all' %>
+
+<div class='height_block'>
 </div>
+<div class='contents_row'> 
+ <h3>　</h3>
+ <h3>　問題投稿</h3>  
+    <div class='line'></div>
+    <div class='form'>
+        
+        
+      <%= form_tag('/quiz/show', method: :get) do %>
+            <p>画像</p>
+            <input class='box' type="img" name='img' value="<%= @img %>">
+            <br>
+            <p>ジャンル</p>
+            <select class='box' name="genre" size="1">
+                <option value="0">なぞなぞ</option>
+                <option value="1">数学</option>
+                <option value="2">科学</option>
+                <option value="3">ライフスタイル</option>
+                <option value="4">アニメ・ゲーム</option>
+                <option value="5">スポーツ</option>
+                <option value="6">その他</option>
+            </select>
+            <br>
+            <p>問題文</p>
+            <textarea class='boxx'  name='text' value="<%= @text %>">
+            </textarea>
+            <br>
+            <p>答え</p>
+            <input  class='box' type="ans" name='ans' value="<%= @ans %>">
+            <br>
+            <input class='box' type="hidden" name='user_id' value=<%= current_user.id %>>
+            <br>
+            <input  type="submit" value="出題する">    
+        <% end %>
+        
+        <%= form_tag('/quiz/new', method: :get) do %>
+            <h2>　</h2>
+            <input type="submit" value="やり直す">
+            <h2>　</h2>
+        <% end %>
+        
+      </div>
+    <div class='row_blocks'></div>
+

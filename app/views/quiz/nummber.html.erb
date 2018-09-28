@@ -1,46 +1,74 @@
-<h5>　</h5>
-<h4>　　クイズ回答</h4>
+<%= stylesheet_link_tag    'quiz/nummber', media: 'all' %>
+
+<div class='height_block'>
+</div>
 <h5>　</h5>
 <div class="contents_row">
- 
+    <h5>　</h5>
+    <h3>　　クイズ回答</h3>
+     <div class='line'></div>
+    
+     
+    <h5>　</h5>
+    <div class='form'>
+        
+        <p>　問題<%= @quiz.id %>　<%= @quiz.name %></p>
+        
         <h5>　</h5>
-        <h4>問題<%= @quiz.id %>　<%= @quiz.name %></h4>
+        <p>画像</p>
+        <div class='textback'>
+            <p><%= @quiz.img%></p>
+        </div>
         <h5>　</h5>
-        <p><%= @quiz.img%></p>
-        <h5>　</h5>
-        <p><%= @quiz.text %></p>
+        <p>問題文</p>
+        <div class='textback'>
+            <p><%= @quiz.text %></p>
+        </div>
         <h5>　</h5>
         <div class="midle">
             <div class="shutudaisha">出題者<%= @quiz.user_id %></div>
-            <div class="hoshi">星</div>
+            <%= image_tag 'tree-stars.jpg', :size => '60x24' %>
+            <%= @quiz.stars.count %>
+            
+            
+            
+            <%= link_to 'STARを付ける',"stars",method: :post %>
+            
+            
+            
             <h5>　</h5>
         </div>
-        <p>半角数字orひらがなで回答して下さい</p>
+        
         <%= form_tag("/quiz/#{@quiz.id}/answer", method: :post) do %>
             <input type='text' name="user_ans" raws="25">
             <input type="submit" value="回答する">
+            <p>（半角数字orひらがなで回答して下さい。）</p>
             <input type='hidden' name='id' value="<%= @quiz.id %>">
             
         <% end %>
-        <div class=comment>
-            <% if @comments %>
-                <% @comments.each do |comment| %>
-                 <h4><%= comment.name%>　</h4>
-                 <p><%= comment.text%></p>
-                 
-                 <div class=comment_line>
-                 </div>
-                <% end %>
-             
-            <% end %>
-            
-        </div>
-      
-        <div class="marginline">
-            
-        
-        <div class="outline">
-        </div>
-
+    </div>
     
+    
+    <div class=comment>
+        <h4>　コメント欄</h4>
+        <% if @comments %>
+            <% @comments.each do |comment| %>
+             <h4>　<%= comment.name%>　</h4>
+             <p>　<%= comment.text%></p>
+             
+             <div class=comment_line>
+             </div>
+            <% end %>
+         
+        <% end %>
+        
+    </div>
+  
+    <div class="marginline">
+        
+
+   
+
+
+    </div>
 </div>

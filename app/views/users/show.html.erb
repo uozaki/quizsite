@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag    'quiz/users', media: 'all' %>
+
+<%
+    genre=["なぞなぞ","数学","科学","ライフスタイル","アニメ・ゲーム","スポーツ","その他"]
+    math=@genre.to_i
+
+%>
+<div class='height_block'>
+</div>
+
+<div class="contents_row">
+        <h5>　</h5>
+    <h3>　プロフィール</h3>
+    <div class='line'></div>
+     <h3>　</h3>
+    <h4>　<%= current_user.name %>さんのページ</h4>
+    
+    
+    <% if @quiz %>
+        <% 
+            array =[]
+            
+            @stars.each do |quiz|
+             
+              array  << 1
+            end
+        %>
+        
+        
+        <%= image_tag 'tree-stars.jpg' ,:size=> '60x24' %> 
+        <p>STARトータル</p>
+        <%= array.count %>
+        
+    <% end %>
+    
+    <h3>　</h3>
+    <div class='comment_line'></div>
+    <%= paginate(@quiz) %>
+    
+    <% if @quiz %>
+        <% @quiz.each do |quiz| %>
+            <h5>　</h5>
+            <h4>問題<%= quiz.id %>　<%= quiz.name %>　ジャンル：<%=genre[quiz.genre.to_i]%> <%= quiz.name %></h4>
+            <h5>　</h5>
+            <p><%= quiz.text %></p>
+            <h5>　</h5>
+            <%= image_tag 'tree-stars.jpg' ,:size=> '60x24' %> 
+            <p> <%= quiz.stars.count%> </p>
+            <%= link_to '編集する' , "/quiz/#{quiz.id}/edit", method: :get %>
+            <%= link_to '削除する' , "/quiz/#{quiz.id}", method: :delete %>
+            <div class="outline">
+            </div>
+        <% end %>
+    <% end %>
+</div>

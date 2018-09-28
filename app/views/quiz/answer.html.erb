@@ -1,62 +1,91 @@
-<% if @user_ans==@answer.ans %>
+<%= stylesheet_link_tag    'quiz/answer', media: 'all' %>
+
+<div class='height_block'>
+</div>
+<h5>　</h5>
+<div class="contents_row">
+    <h5>　</h5>
+    <h3>　　答え合わせ</h3>
+     <div class='line'></div>
+    
+     
+    <div class='form'>
+        <% if @user_ans==@answer.ans %>
         
-        <div class="correct">
- 
         <h5>　</h5>
-        <h4>問題<%= @quiz.id %>　<%= @quiz.name %></h4>
+        <p>問題<%= @quiz.id %>　<%= @quiz.name %></p>
         <h5>　</h5>
-        <p><%= @quiz.img%></p>
+        <div class='textback'>
+            <p><%= @quiz.img%></p>
+        </div>
         <h5>　</h5>
-        <p><%= @quiz.text %></p>
+        <div class='textback'>
+            <p><%= @quiz.text %></p>
+        </div>
         <h5>　</h5>
         <div class="midle">
-        <h5>　</h5>
-        <div><%= @user_ans%></div>
-        <h5>　</h5>
-        <h3>正解</h3>
-        <h5>　</h5>
-        <%= form_tag("/quiz/#{@quiz.id}/comments", method: :post) do %>
-            <input type='text' name='text' >
-            
-            <input type='submit' value='コメントする'>
-            <input type='hidden' name='id' value= "<%= @quiz.id %>">
-        <% end %>
-        
+            <h5>　</h5>
+            <div><%= @user_ans%></div>
+            <h5>　</h5>
+            <h3>正解</h3>
+            <h5>　</h5>
+            <%= form_tag("/quiz/#{@quiz.id}/comments", method: :post) do %>
+                <input type='text' name='text' >
+                
+                <input type='submit' value='コメントする'>
+                <input type='hidden' name='id' value= "<%= @quiz.id %>">
+            <% end %>
+             <h5>　</h5>
         </div>
+    </div>   
         
-        
-        
+     <div class='row_block'></div>  
         
         
         
         
         
     <% else %>
-               <div class="correct">
+        <div class="form">
  
-        <h5>　</h5>
-        <h4>問題<%= @quiz.id %>　<%= @quiz.name %></h4>
-        <h5>　</h5>
-        <p><%= @quiz.img%></p>
-        <h5>　</h5>
-        <p><%= @quiz.text %></p>
-        <h5>　</h5>
-        <div class="midle">
-        <h5>　</h5>
-        <div><%= @user_ans%></div>
-        <h5>　</h5>
-        <h3>不正解</h3>
-        <h5>　</h5>
-        <%= link_to '問題へ' , "/quiz",  mehod: :get %>
-        <div><%= @answer.ans%></div>
-        
-        <%= form_tag("/quiz/#{@quiz.id}/comments", method: :post) do %>
-            <input type='text' name='text' >
+            <p>問題<%= @quiz.id %>　<%= @quiz.name %></p>
+            <h5>　</h5>
+            <div class='textback'>
+                <p><%= @quiz.img%></p>
+            </div>
+            <h5>　</h5>
+            <div class='textback'>
+                <p><%= @quiz.text %></p>
+            </div>
+            <h5>　</h5>
+            <div class="midle">
+            <h5>　</h5>
+            <div><%= @user_ans%></div>
+            <h5>　</h5>
+            <h3>不正解</h3>
             
-            <input type='submit' value='コメントする'>
-            <input type='hidden' name='id' value= "<%= @quiz.id %>">
-        <% end %>
-        
-        
+            <h5>　</h5>
+            <p>答え</p>
+            <div class='textback'>
+                <div><%= @answer.ans%></div>
+            </div>
+            <h5>　</h5>
+            <%= link_to '問題へ' , "/quiz",  mehod: :get %>
+             <h5>　</h5>
+            <%= form_tag("/quiz/#{@quiz.id}/comments", method: :post) do %>
+                <input type='text' name='text' >
+                
+                <input type='submit' value='コメントする'>
+                <input type='hidden' name='id' value= "<%= @quiz.id %>">
+            <% end %>
+            <h5>　</h5>
+            
+            
+            </div>
         </div>
-<% end %>
+        
+    
+    <div class='row_block'></div>     
+    <% end %>
+  
+</div>

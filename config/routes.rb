@@ -1,13 +1,32 @@
 Rails.application.routes.draw do
   root 'quiz#index'
-  devise_for :users
+  devise_for :users do
+    member do
+      get :show
+    end
+  end
   resources :quiz do
     resources :comments,only: [:create]
+    resources :stars,only: [:create]
     member do
       get :nummber
       post :answer
     end  
+    collection do
+      get :popular
+      get :nazonazo
+      get :math
+      get :science
+      get :life
+      get :anime
+      get :sport
+      get :otherwise
+    end  
   end  
+  
+  resources :users ,only: [:show]
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
