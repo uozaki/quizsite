@@ -53,6 +53,4 @@ gem 'kaminari'
 gem 'carrierwave'
 gem 'rmagick'
 end
-group :production do
-  gem 'rails_12factor'
-end
+gem 'rails_12factor'
