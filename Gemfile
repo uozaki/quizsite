@@ -53,4 +53,3 @@ gem 'kaminari'
 gem 'carrierwave'
 gem 'rmagick'
 end
-gem 'rails_12factor'
