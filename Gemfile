@@ -40,7 +40,8 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  
+  gem 'spring'
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 
 
@@ -50,6 +51,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'therubyracer'
+gem 'paperclip'
 gem 'pry-rails'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
@@ -57,5 +60,5 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
 gem 'kaminari'
-gem 'rmagick'
-gem 'spring'
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-material-design', '0.1.4'
