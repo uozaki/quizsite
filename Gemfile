@@ -52,7 +52,6 @@ group :production do
 end
 
 gem 'therubyracer'
-gem 'paperclip'
 gem 'pry-rails'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
