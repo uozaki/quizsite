@@ -1,0 +1,24 @@
+/* line 1, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/quiz.css.scss */
+.hoshi {
+  float: left;
+  width: 5em;
+  height: 10em;
+}
+
+/* line 6, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/quiz.css.scss */
+.shutudaisha {
+  float: left;
+}
+
+/* line 10, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/quiz.css.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 15, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/quiz.css.scss */
+.marginline {
+  width: 5em;
+  height: 10em;
+}

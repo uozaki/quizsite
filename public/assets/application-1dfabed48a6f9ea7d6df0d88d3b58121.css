@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* line 3, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+h1, h2, h3, h4, h5, h6, p, body {
+  padding: 0px 0;
+  margin: 0;
+}
+
+/* line 8, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 15, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+header {
+  background-color: white;
+  width: 100%;
+  padding: 0px 0;
+  margin: 0;
+  border-bottom: 2px solid #333333;
+}
+
+/* line 22, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.contents {
+  background-color: #EEEEEE;
+  margin: 0  auto;
+  height: 100%;
+  width: 62em;
+}
+
+/* line 31, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.contents_row {
+  background-color: white;
+  width: 58em;
+  margin: 0 auto;
+}
+
+/* line 36, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+footer {
+  background-color: white;
+  height: 2em;
+  width: 62em;
+  margin: 0 auto;
+  padding: 0px 0;
+  text-align: center;
+}
+
+/* line 47, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.back_image {
+  background-image: url("wood_pattern_@2X.jpg");
+  height: 100%;
+  width: 100%;
+}
+
+/* line 54, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.rogo {
+  float: left;
+  padding: 0px 0;
+  margin: 0;
+}
+
+/* line 59, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.left_block {
+  float: left;
+  　　margin: auto;
+}
+
+/* line 63, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.right_block {
+  float: right;
+  margin: 0em 0em 0em 3em;
+}
+
+/* line 67, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* line 72, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+ul, li {
+  margin: 0em 0em 0em 3em;
+  list-style: none;
+  float: left;
+}
+
+/* line 80, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.hoshi {
+  text-align: center;
+}
+
+/* line 84, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.shutudaisha {
+  float: right;
+  width: 20em;
+  text-align: center;
+}
+
+/* line 91, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.marginline {
+  height: 2em;
+}
+
+/* line 95, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.outline {
+  border-bottom: 2px solid #DDDDDD;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50em;
+}
+
+/* line 101, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.sign_up {
+  margin: 0;
+}
+
+/* line 104, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+.row_block {
+  height: 3em;
+  background-color: #EEEEEE;
+  margin: auto;
+}
+
+/* line 110, /home/ec2-user/environment/quizsite/app/assets/stylesheets/application.css.scss */
+ul.left_block {
+  float: left;
+  　　margin: auto;
+}

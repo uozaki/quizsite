@@ -1,0 +1,76 @@
+/* line 1, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.height_block {
+  width: 58em;
+  height: 3em;
+}
+
+/* line 5, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.contents_row {
+  background-color: white;
+  width: 58em;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* line 11, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.line {
+  border-bottom: 2px solid #FFFF33;
+  margin-left: auto;
+  margin-right: auto;
+  width: 56em;
+}
+
+/* line 17, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.form {
+  margin: 3em;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+/* line 23, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.sign_up {
+  padding: 10px 40px;
+  background-color: #EEEEEE;
+}
+
+/* line 27, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.field {
+  padding: 5px 40px;
+  text-align: center;
+}
+
+/* line 31, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.actions {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+/* line 36, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.sign_up {
+  color: black;
+}
+
+/* line 39, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+input.box {
+  width: 30em;
+}
+
+/* line 42, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+textarea.boxx {
+  width: 30em;
+  height: 30em;
+}
+
+/* line 46, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.row_block {
+  height: 0;
+  width: 0;
+}
+
+/* line 50, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/show.css.scss */
+.contents {
+  background-color: #EEEEEE;
+  margin: 0  auto;
+  height: 100vh;
+  width: 62em;
+}

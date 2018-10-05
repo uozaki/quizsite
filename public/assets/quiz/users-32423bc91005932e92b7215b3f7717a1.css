@@ -1,0 +1,85 @@
+/* line 1, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.height_block {
+  width: 58em;
+  height: 3em;
+}
+
+/* line 5, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.contents_row {
+  background-color: white;
+  width: 58em;
+  margin: 0 auto;
+}
+
+/* line 12, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.line {
+  border-bottom: 2px solid #FFFF33;
+  margin-left: auto;
+  margin-right: auto;
+  width: 56em;
+}
+
+/* line 18, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.form {
+  margin: 3em;
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+/* line 24, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.sign_up {
+  padding: 10px 40px;
+  background-color: #EEEEEE;
+}
+
+/* line 28, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.field {
+  padding: 5px 40px;
+  text-align: center;
+}
+
+/* line 32, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.actions {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+/* line 37, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.sign_up {
+  color: black;
+}
+
+/* line 40, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+input.box {
+  width: 30em;
+}
+
+/* line 43, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+textarea.boxx {
+  width: 30em;
+  height: 30em;
+}
+
+/* line 51, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.textback {
+  background-color: white;
+  margin: 0em 2em;
+}
+
+/* line 55, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+.comment_line {
+  border-bottom: 2px solid green;
+  margin-left: auto;
+  margin-right: auto;
+  width: 56em;
+}
+
+/* line 61, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/users.css.scss */
+footer {
+  background-color: white;
+  height: 2em;
+  margin: 0 auto;
+  padding: 0px 0;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+/* line 1, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.height_block {
+  width: 58em;
+  height: 3em;
+}
+
+/* line 7, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.line {
+  border-bottom: 2px solid #FFFF33;
+  margin-left: auto;
+  margin-right: auto;
+  width: 56em;
+}
+
+/* line 13, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.form {
+  padding: 20px 40px;
+}
+
+/* line 17, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.sign_up {
+  padding: 10px 40px;
+  background-color: #EEEEEE;
+}
+
+/* line 21, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.field {
+  padding: 5px 40px;
+  text-align: center;
+}
+
+/* line 25, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.actions {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+/* line 30, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.sign_up {
+  color: black;
+}
+
+/* line 34, /home/ec2-user/environment/quizsite/app/assets/stylesheets/quiz/sign_up.css.scss */
+.contents {
+  background-color: #EEEEEE;
+  margin: 0  auto;
+  height: 100vh;
+  width: 62em;
+}
